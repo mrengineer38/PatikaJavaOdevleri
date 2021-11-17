@@ -6,24 +6,19 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner klavye = new Scanner(System.in);
-        System.out.print("Kaç Tane Sayı Gireceksiniz?: ");
-        int sayiAdet = klavye.nextInt();
-        int sayi;
-        double enBuyuk = 1;
-        double enKucuk = 1;
-        for(int i=1;i<=sayiAdet;i++){
-            System.out.print(i+".Sayiyi Giriniz.");
-            sayi = klavye.nextInt();
-
-            if(sayi>enBuyuk){
-                enBuyuk = sayi;
+        System.out.print("Bir Sayı Giriniz:");
+        int sayi = klavye.nextInt();
+        int sum = 0;
+        for (int i=1;i<sayi;i++){
+            if(sayi%i==0){
+                sum=sum+i;
             }
-            if (sayi<enKucuk){
-                enKucuk = sayi;
-            }
-
         }
-        System.out.println("En Buyuk Sayi:"+enBuyuk);
-        System.out.println("En Küçük Sayı: "+enKucuk);
+        if (sum==sayi){
+            System.out.println(sayi+" Mükemmel Sayıdır.");
+        }
+        else {
+            System.out.println(sayi+" Mükemmel Sayı Değildir.");
+        }
     }
 }
