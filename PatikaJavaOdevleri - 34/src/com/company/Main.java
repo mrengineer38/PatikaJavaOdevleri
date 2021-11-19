@@ -8,18 +8,17 @@ public class Main {
     public static void main(String[] args) {
         //Rock Me Amadeus!
         Scanner klavye = new Scanner(System.in);
-        System.out.println("Sayıyı Giriniz:");
+        System.out.println("Dizinin Uzunluğunu Giriniz:");
         int sayi = klavye.nextInt();
         double sum = 0;
         double[] numbers = new double[sayi];
         for (int i = 0; i < numbers.length; i++) {
-            System.out.println((i + 1) + " .Sayıyı Giriniz.");
-            double insertSayi = klavye.nextInt();
-            numbers[i] = insertSayi;
-            sum = sum + insertSayi;
+
+            numbers[i] = 1.0/(i+1);
+            sum = sum + numbers[i];
         }
 
-        System.out.println(sum / numbers.length);
+        System.out.println("Toplam: "+sum);
     }
 
 }
